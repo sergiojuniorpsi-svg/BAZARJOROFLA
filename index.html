@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAZAR JOROFLA LTDA - Variedades e Utilidades Domésticas</title>
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f3e9.png">
+    <meta name="description" content="BAZAR JOROFLA LTDA - Seu bazar completo em Ferraz de Vasconcelos - SP. Variedades, utilidades domésticas, presentes e muito mais!">
+    <meta name="keywords" content="bazar, variedades, utilidades domésticas, Ferraz de Vasconcelos, produtos para casa, presentes, decoração">
+    <meta name="author" content="BAZAR JOROFLA LTDA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --primary-dark: #E55A2B;
+            --secondary: #2A9D8F;
+            --accent: #E9C46A;
+            --light: #FFF8F0;
+            --dark: #264653;
+            --text: #333333;
+            --gray: #6c757d;
+            --border: #FFD7C2;
+            --shadow: 0 5px 15px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+            --success: #2A9D8F;
+            --warning: #E9C46A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: var(--shadow);
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.3rem;
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 2rem;
+        }
+
+        nav a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -8px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            font-size: 1.1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            margin-left: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--primary);
+            border-color: white;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 6rem 0;
+            background-color: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.3rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 2.5rem auto 0;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .category-icon {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(233, 196, 106, 0.1));
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+        }
+
+        .category-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .category-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Products */
+        .products {
+            padding: 6rem 0;
+            background-color: white;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .product-category {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .product-description {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* About */
+        .about {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(42, 157, 143, 0.05));
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .feature-text p {
+            color: var(--gray);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Services */
+        .services {
+            padding: 6rem 0;
+            background-color: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem 2.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 6rem 0;
+            background-color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 3.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        .contact-info > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .contact-details {
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .contact-text h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .business-info {
+            background-color: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .business-info h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .contact-form {
+            background: var(--light);
+            padding: 3.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 2rem;
+            color: var(--dark);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+            font-size: 1rem;
+            background-color: white;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .map-container {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 2rem;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 5rem 0 2.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a i {
+            margin-right: 10px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .footer-links a:hover i {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            color: var(--dark);
+            transform: translateY(-5px);
+        }
+
+        .payment-methods {
+            margin-top: 2rem;
+        }
+
+        .payment-methods h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .payment-icons i {
+            font-size: 1.8rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 1.5rem;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            nav li {
+                margin: 0 1rem 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+                display: block;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+
+            .contact-info, .contact-form {
+                padding: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 5rem 0;
+            }
+
+            section {
+                padding: 5rem 0;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .category-card, .service-card {
+                padding: 2.5rem 2rem;
+            }
+
+            .contact-info, .contact-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">BJ</div>
+                    <div class="logo-text">
+                        <h1>BAZAR JOROFLA LTDA</h1>
+                        <p>Variedades e Utilidades Domésticas</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#categories">Categorias</a></li>
+                        <li><a href="#products">Produtos</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Tudo para Sua Casa em Um Só Lugar!</h2>
+            <p>Encontre as melhores variedades, utilidades domésticas, presentes e decoração no BAZAR JOROFLA LTDA. Qualidade e variedade em Ferraz de Vasconcelos - SP.</p>
+            <a href="#products" class="btn">Conheça Nossos Produtos</a>
+            <a href="#contact" class="btn btn-secondary">Visite Nossa Loja</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossas Categorias</h2>
+                <p>Descubra nossa ampla variedade de produtos para todas as necessidades da sua casa</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Utilidades Domésticas</h3>
+                    <p>Panelas, talheres, eletrodomésticos básicos, produtos de limpeza e tudo que você precisa para o dia a dia da sua casa.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3>Decoração e Lar</h3>
+                    <p>Enfeites, quadros, cortinas, almofadas e itens decorativos para tornar sua casa mais aconchegante e bonita.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Presentes e Lembranças</h3>
+                    <p>Opções variadas para presentear em todas as ocasiões: aniversários, casamentos, datas comemorativas e muito mais.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Têxteis e Cama Mesa Banho</h3>
+                    <p>Roupas de cama, toalhas, cortinas e outros produtos têxteis de qualidade para seu conforto e bem-estar.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Ferramentas e Utilidades</h3>
+                    <p>Ferramentas básicas, material de construção, produtos para organização e soluções práticas para seu lar.</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Jardinagem e Exterior</h3>
+                    <p>Vasos, ferramentas de jardinagem, decoração para exterior e produtos para cuidar do seu espaço verde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Produtos em Destaque</h2>
+                <p>Confira alguns dos nossos produtos mais populares</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Jogo de Panelas">
+                    </div>
+                    <div class="product-info">
+                        <h3>Jogo de Panelas Antiaderente</h3>
+                        <div class="product-category">Utilidades Domésticas</div>
+                        <div class="product-description">
+                            Conjunto completo de panelas antiaderentes de alta qualidade para sua cozinha.
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Conjunto de Toalhas">
+                    </div>
+                    <div class="product-info">
+                        <h3>Conjunto de Toalhas Banho</h3>
+                        <div class="product-category">Têxteis</div>
+                        <div class="product-description">
+                            Toalhas macias e absorventes em diversas cores e tamanhos para seu banheiro.
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kit Decoração">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kit Decoração para Sala</h3>
+                        <div class="product-category">Decoração</div>
+                        <div class="product-description">
+                            Conjunto de itens decorativos para tornar sua sala mais aconchegante e elegante.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nossa Empresa</h2>
+                <p>Conheça a história e os valores do BAZAR JOROFLA LTDA</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Sua Loja de Variedades em Ferraz de Vasconcelos</h3>
+                    <p>O <strong>BAZAR JOROFLA LTDA</strong> está há mais de 10 anos servindo a comunidade de Ferraz de Vasconcelos e região com produtos de qualidade para todas as necessidades domésticas.</p>
+                    <p>Localizada estrategicamente na Avenida Brasil, nossa loja oferece uma ampla variedade de produtos que vão desde utilidades básicas para o lar até itens de decoração e presentes especiais.</p>
+                    <p>Nossa missão é proporcionar aos nossos clientes uma experiência de compra agradável, com produtos de qualidade, atendimento personalizado e preços justos.</p>
+
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Qualidade Garantida</h4>
+                                <p>Todos os produtos passam por rigoroso controle de qualidade antes de chegar às prateleiras.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Atendimento Personalizado</h4>
+                                <p>Nossa equipe está sempre pronta para ajudar você a encontrar exatamente o que precisa.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Variedade de Produtos</h4>
+                                <p>Mais de 1.000 itens diferentes em diversas categorias para sua casa e família.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Satisfação Garantida</h4>
+                                <p>Compromisso total com a satisfação dos nossos clientes em cada compra realizada.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="BAZAR JOROFLA LTDA - Interior da Loja">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Além de produtos de qualidade, oferecemos serviços para melhor atendê-lo</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Embalagem para Presentes</h3>
+                    <p>Embalamos seus presentes com carinho e cuidado, deixando-os prontos para presentear.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Entrega na Região</h3>
+                    <p>Serviço de entrega disponível para compras acima de determinado valor na região de Ferraz de Vasconcelos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Consultoria de Decoração</h3>
+                    <p>Nossa equipe pode ajudar com dicas e sugestões para decorar sua casa de forma prática e bonita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <p>Visite nossa loja ou entre em contato para mais informações</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Visite Nossa Loja</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Endereço</h4>
+                                <p>AV BRASIL, 1232, BOX 4<br>SÍTIO PAREDÃO<br>FERRAZ DE VASCONCELOS - SP<br>CEP: 08501-000<br>Brasil</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Horário de Funcionamento</h4>
+                                <p>Segunda a Sexta: 8:00 - 18:00<br>Sábado: 8:00 - 16:00<br>Domingo: 8:00 - 12:00</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telefone</h4>
+                                <p>(11) 1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>E-mail</h4>
+                                <p>contato@bazarjorofla.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-info">
+                        <h4>Informações Comerciais</h4>
+                        <p><strong>Razão Social:</strong> BAZAR JOROFLA LTDA</p>
+                        <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+                        <p><strong>Endereço Comercial:</strong> AV BRASIL, 1232, BOX 4, SÍTIO PAREDÃO, FERRAZ DE VASCONCELOS - SP</p>
+                        <p><strong>Atividade:</strong> Comércio Varejista de Artigos de Armarinho, Utilidades Domésticas e Presentes</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" class="form-control">
+                                <option value="">Selecione um assunto</option>
+                                <option value="information">Informações sobre Produtos</option>
+                                <option value="delivery">Informações sobre Entrega</option>
+                                <option value="suggestion">Sugestões ou Reclamações</option>
+                                <option value="partnership">Parcerias Comerciais</option>
+                                <option value="other">Outros Assuntos</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" class="form-control" required placeholder="Como podemos ajudar você?"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; background-color: var(--primary); color: white;">Enviar Mensagem</button>
+                    </form>
+
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.112242610895!2d-46.37015022427087!3d-23.67377857872845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce71f92d44a8a5%3A0x4b2b3b3b3b3b3b3b!2sAv.%20Brasil%2C%201232%20-%20S%C3%ADtio%20Pared%C3%A3o%2C%20Ferraz%20de%20Vasconcelos%20-%20SP%2C%2008501-000!5e0!3m2!1spt-BR!2sbr!4v1690000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BAZAR JOROFLA LTDA</h3>
+                    <p>Sua loja de variedades em Ferraz de Vasconcelos. Tudo para sua casa em um só lugar!</p>
+                    <div class="contact-item" style="margin-top: 1.5rem;">
+                        <div style="display: flex; align-items: flex-start;">
+                            <div style="background: rgba(255,255,255,0.1); color: white; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 1.2rem;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p>AV BRASIL, 1232, BOX 4<br>SÍTIO PAREDÃO<br>FERRAZ DE VASCONCELOS - SP<br>CEP: 08501-000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="politica-de-privacidade.html"><i class="fas fa-chevron-right"></i>Política de Privacidade</a></li>
+                        <li><a href="termos-de-uso.html"><i class="fas fa-chevron-right"></i>Termos de Uso</a></li>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Início</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> Categorias</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Produtos</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Sobre Nós</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categorias</h3>
+                    <ul class="footer-links">
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> Utilidades Domésticas</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> Decoração</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> Presentes</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> Têxteis</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> Ferramentas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Formas de Pagamento</h3>
+                    <div class="payment-methods">
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-diners-club"></i>
+                            <i class="fas fa-money-bill-wave"></i>
+                            <i class="fas fa-barcode"></i>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 BAZAR JOROFLA LTDA - AV BRASIL, 1232, BOX 4, SÍTIO PAREDÃO, FERRAZ DE VASCONCELOS - SP, 08501-000 - Todos os direitos reservados.</p>
+                <p style="margin-top: 0.5rem;">CNPJ: 12.345.678/0001-90 | Comércio Varejista de Artigos de Armarinho e Utilidades Domésticas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Obrigado por sua mensagem! Entraremos em contato em breve.');
+                    contactForm.reset();
+                });
+            }
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
